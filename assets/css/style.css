@@ -220,3 +220,10 @@ section{padding:var(--s-9) 0}
   .site-nav .btn{min-height:44px;padding:var(--s-2) var(--s-4)}
   .service,.quote{padding:var(--s-5)}
 }
+
+/* Long testimonials: masonry columns, body type */
+.quotes{columns:1;column-gap:var(--s-5)}
+@media (min-width:900px){.quotes{columns:2}}
+.quotes .quote{break-inside:avoid;margin:0 0 var(--s-5)}
+.quote--long p{font-family:var(--font-body);font-style:normal;font-size:clamp(1rem,1.6vw,1.075rem);line-height:1.65;margin:0 0 var(--s-3)}
+.quote--long footer{margin-top:var(--s-4)}
