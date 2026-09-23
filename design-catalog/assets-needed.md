@@ -14,4 +14,4 @@ Everything the concept is missing. Each item is marked on the pages with a dashe
 | 8 | Booking: today it's Wix Bookings. Confirm the Google Calendar page is set up as a 20-minute Discovery call, and whether he wants a contact form at all | Angus | Discovery call page |
 | 9 | Data exports: contacts, subscribers, form submissions, bookings | Wix | Cutover |
 | 10 | Domain registrar login and DNS records, including email | Angus | SUMMIT-208 |
-| 11 | Photography: the current site uses Angus's own photos (frosted pine, two desert expedition shots, book cover). Full-resolution originals | Angus | All pages |
+| 11 | Photography: the frosted pine and two desert expedition photos are in the concept at screenshot resolution (`assets/img/photos/`). Needed: full-resolution originals, and the SISU book cover without the Wix button over it | Angus | Home, Work with Angus, Discovery call, Media |
