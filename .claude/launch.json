@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "blackdragonenterprises",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4332"],
+      "port": 4332
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Black Dragon Enterprises seal: a dragon chasing the pearl</title>
+<rect x="3" y="3" width="58" height="58" rx="4" fill="#A3262A"/>
+<rect x="8" y="8" width="48" height="48" rx="2" fill="none" stroke="#F5F1E8" stroke-width="1.5"/>
+<path d="M15 47 C15 36 25 35 30 33 C36 31 40 27 40 21" fill="none" stroke="#F5F1E8" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M40 21 L45 16 M40 21 L46 22" fill="none" stroke="#F5F1E8" stroke-width="3" stroke-linecap="round"/>
+<path d="M21 40 l-3 -4 M27 36 l-2 -5 M34 32 l-1 -5" fill="none" stroke="#F5F1E8" stroke-width="2" stroke-linecap="round"/>
+<circle cx="47" cy="44" r="5" fill="#C39A4B"/>
+</svg>
