@@ -2,8 +2,10 @@
 import pathlib, textwrap, importlib.util
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-BASE = "https://ryankolean.github.io/blackdragonenterprises/"
-SISU = "https://ryankolean.github.io/thesisuway/"
+import os
+PROD = os.environ.get("SITE_ENV") == "production"   # SITE_ENV=production python3 tools/<this file> for the live build
+BASE = "https://blackdragonenterprises.com/" if PROD else "https://ryankolean.github.io/blackdragonenterprises/"
+SISU = "https://thesisuway.com/" if PROD else "https://ryankolean.github.io/thesisuway/"
 EMAIL = "angus@blackdragonenterprises.com"
 BOOK = "https://calendar.app.google/LoMbzd8xpjeCvdap7"
 LINKEDIN = "https://www.linkedin.com/in/coachangus/"
@@ -19,6 +21,14 @@ SUBSTACK = "https://substack.com/@sisublackdragon"
 exec(open(pathlib.Path(__file__).with_name("testimonials_bde.py")).read())
 
 
+ROBOTS = "" if PROD else '<meta name="robots" content="noindex, nofollow">'
+CONCEPT = "" if PROD else """<aside class="concept-bar" aria-label="Concept preview notice">
+  <div class="container">
+    <p><strong>Concept preview</strong>A redesign by <a href="https://summitsoftwaresolutions.dev/">Summit Software Solutions</a>. Not the live site, which is <a href="https://www.blackdragonenterprises.com/">blackdragonenterprises.com</a>. Placeholder content is marked.</p>
+  </div>
+</aside>
+"""
+
 def page(slug, title, desc, body, extra_head=""):
     cur = ' aria-current="page"'
     nav = "\n".join(f'        <li><a href="{h}"{cur if h == slug else ""}>{l}</a></li>' for h, l in NAV)
@@ -31,7 +41,7 @@ def page(slug, title, desc, body, extra_head=""):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{url}">
-<meta name="robots" content="noindex, nofollow">
+{ROBOTS}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Black Dragon Enterprises">
 <meta property="og:title" content="{title}">
@@ -50,12 +60,7 @@ def page(slug, title, desc, body, extra_head=""):
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<aside class="concept-bar" aria-label="Concept preview notice">
-  <div class="container">
-    <p><strong>Concept preview</strong>A redesign by <a href="https://summitsoftwaresolutions.dev/">Summit Software Solutions</a>. Not the live site, which is <a href="https://www.blackdragonenterprises.com/">blackdragonenterprises.com</a>. Placeholder content is marked.</p>
-  </div>
-</aside>
-
+{CONCEPT}
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="wordmark" href="index.html" aria-label="Black Dragon Enterprises, home">{WORDMARK}</a>
@@ -613,3 +618,16 @@ print("wrote specimen.html")
 </section>
 """).replace('href="','href="__').replace('href="__http','href="http').replace('href="__mailto','href="mailto').replace('href="__#','href="#').replace('href="__','href="/blackdragonenterprises/').replace('src="assets/','src="/blackdragonenterprises/assets/'))
 print("wrote 404.html")
+
+
+# ---------------------------------------------------------------- launch files
+PAGES = ['index.html', 'services.html', 'about.html', 'testimonials.html', 'media.html', 'contact.html']
+if PROD:
+    _p = ROOT / "404.html"; _p.write_text(_p.read_text().replace('"/blackdragonenterprises/', '"/'))
+    _m = ROOT / "site.webmanifest"; _m.write_text(_m.read_text().replace('"/blackdragonenterprises/', '"/'))
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
+    (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{BASE}{'' if p == 'index.html' else p.replace('.html', '')}</loc></url>\n" for p in PAGES) + "</urlset>\n")
+    print("wrote production robots.txt and sitemap.xml")
+else:
+    (ROOT / "robots.txt").write_text("User-agent: *\nDisallow: /\n")

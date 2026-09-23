@@ -1,0 +1,16 @@
+# Cloudflare Pages redirects: old Wix URLs -> new pages (301 = permanent).
+# GitHub Pages ignores this file; it takes effect when the site moves to Cloudflare Pages.
+# Slugs marked (confirm) come from search-engine listings and screenshots; check them in the Wix dashboard.
+
+/aboutme              /about         301
+/about-copy           /media         301   # live "About Me" page is the Media page (confirm)
+/blank-page           /testimonials  301
+/clients              /about         301   # old History page
+/podcastsites         /media         301
+/blog                 /media         301   # writing now lives on Substack
+/post/*               /media         301   # old Wix blog posts (map individually if Angus brings any back)
+/blackdragonstore     /              301
+/book-online          /contact       301   # (confirm)
+/service-page/*       /contact       301   # Wix Bookings service pages (confirm)
+/booking-calendar/*   /contact       301   # Wix Bookings calendar (confirm)
+/discovery-call       /contact       301   # (confirm the live slug)
