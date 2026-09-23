@@ -50,11 +50,11 @@ def page(slug, title, desc, body, extra_head=""):
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="concept-bar" role="note" aria-label="Concept preview notice">
+<aside class="concept-bar" aria-label="Concept preview notice">
   <div class="container">
     <p><strong>Concept preview</strong>A redesign by <a href="https://summitsoftwaresolutions.dev/">Summit Software Solutions</a>. Not the live site, which is <a href="https://www.blackdragonenterprises.com/">blackdragonenterprises.com</a>. Placeholder content is marked.</p>
   </div>
-</div>
+</aside>
 
 <header class="site-header">
   <div class="container site-header__inner">
@@ -300,7 +300,7 @@ P["services.html"] = page("services.html",
 
 <section>
   <div class="container">
-    <span class="label">Five ways to work together</span>
+    <h2 class="label">Five ways to work together</h2>
     <div class="grid grid--2" style="margin-top:var(--s-6)">
 {offer_cards()}
     </div>
@@ -365,7 +365,8 @@ P["media.html"] = page("media.html",
 
 <section>
   <div class="container">
-    <ul class="media">
+    <h2 class="label">Where to find Angus</h2>
+    <ul class="media" style="margin-top:var(--s-5)">
       <li><span class="kind">Book</span><h3><em>SISU: A Series of Epic Adventures</em></h3><a href="{BOOKSTORE}">Buy the book</a></li>
       <li><span class="kind">Video</span><h3>YouTube &middot; By the Black Dragon</h3><a href="{YOUTUBE}">Watch</a></li>
       <li><span class="kind">Writing</span><h3>Substack</h3><a href="{SUBSTACK}">Read</a></li>
