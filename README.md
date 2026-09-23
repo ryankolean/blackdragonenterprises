@@ -54,7 +54,7 @@ Type is **Cormorant Garamond** (headings, quotes) and **Manrope** (everything el
 
 - **Testimonials, history and podcast links** wait on Wix access; two testimonial lines are as indexed by search engines and need checking.
 - **Services** are proposed from the current site's four headline services.
-- **The contact form** is not connected and **the booking calendar** is a stand-in.
+- **The contact form** is not connected. **Booking** uses the Google Calendar booking page Angus already uses in the SISU app.
 - **The seal** is drawn for the concept.
 - **No photography** yet.
 

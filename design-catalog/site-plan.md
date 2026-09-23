@@ -24,7 +24,7 @@ Fill in from the Wix dashboard's **installed apps** list. Nothing is dropped wit
 | Feature | On current site? | Replacement on Summit's stack | Concept status |
 |---|---|---|---|
 | Contact form | To verify | Form service (Formspree, Basin or similar) emailing Angus | Form built, not connected |
-| Booking / scheduling | To verify | Calendly or Cal.com embed | Stand-in box on Contact |
+| Booking / scheduling | To verify on Wix | Google Calendar booking page Angus already uses in the SISU app | Linked from Contact and every "Book" button |
 | Payments / packages | To verify | Stripe payment links or checkout | Not built |
 | Email list / newsletter | To verify | Buttondown, MailerLite or similar; import Wix contacts | Not built |
 | Blog | To verify | Static posts or a headless CMS | Not built |
