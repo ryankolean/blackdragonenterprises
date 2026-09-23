@@ -27,7 +27,7 @@ Reviewed from screenshots of the live site and the full Testimonials text, suppl
 | **Booking** | **Yes: Wix Bookings**, "Discovery", free 20-minute call, Book Now | Google Calendar appointment page Angus already uses in the SISU app (set to 20 minutes), or Cal.com | Built: every "Book" button links to it |
 | Service descriptions | Yes, five offerings | Static page, Angus's copy | Built |
 | Testimonials | Yes, 17 | Static page | Built, verbatim |
-| Media links | YouTube, Substack, book | Media page | Built; YouTube channel and Substack addresses to confirm |
+| Media links | YouTube (@bytheblackdragon), Substack (@sisublackdragon), book (Tactical 16 author page) | Media page | Built, real links |
 | Contact | Email and LinkedIn in the footer; no form | Same; an optional form is shown in the concept | Form built, not connected, optional |
 | Cookie consent | Yes, Wix banner | Only needed if analytics or embeds set cookies; cookieless analytics avoids it | Not needed yet |
 | Blog | Old indexed pages only | Redirect old URLs, or carry posts over if Angus wants them | Not built |
